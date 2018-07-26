@@ -1,0 +1,25 @@
+#!/bin/bash
+
+set -e
+
+if [ "$1" == "gud" ]
+then
+  branch=$(/usr/local/bin/git rev-parse --abbrev-ref HEAD)
+  echo "git fetch upstream"
+  /usr/local/bin/git fetch upstream
+elif [ "$1" == "gud," ] && [ "$2" == "scrub" ]
+then
+  branch=$(/usr/local/bin/git rev-parse --abbrev-ref HEAD)
+  echo "git fetch upstream"
+  /usr/local/bin/git fetch upstream
+  echo "git reset --hard upstream/$branch"
+  /usr/local/bin/git reset --hard upstream/"$branch"
+elif [ "$1" == "push" ] && [ "$2" == "it" ]
+then
+  (afplay -t 10 ~/Music/stuff/push_it.mp3 > /dev/null 2>&1 &)
+  branch=$(/usr/local/bin/git rev-parse --abbrev-ref HEAD)
+  echo "git push origin $branch"
+  /usr/local/bin/git push origin "$branch"
+else
+  /usr/local/bin/git "$@"
+fi
