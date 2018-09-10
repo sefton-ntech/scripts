@@ -26,3 +26,4 @@ PERL_MM_OPT="INSTALL_BASE=/Users/sefton/perl5"; export PERL_MM_OPT;
 # Add RVM to PATH for scripting. Make sure this is the last PATH variable change.
 export PATH="$PATH:$HOME/.rvm/bin"
 alias git="~/bin/git"
+PROMPT_COMMAND="history -a;$PROMPT_COMMAND"

@@ -16,7 +16,7 @@ then
   /usr/local/bin/git reset --hard upstream/"$branch"
 elif [ "$1" == "push" ] && [ "$2" == "it" ]
 then
-  (afplay -t 10 ~/Music/stuff/push_it.mp3 > /dev/null 2>&1 &)
+  (afplay -t 3 ~/Music/stuff/push_it.mp3 > /dev/null 2>&1 &)
   branch=$(/usr/local/bin/git rev-parse --abbrev-ref HEAD)
   echo "git push origin $branch"
   /usr/local/bin/git push origin "$branch"
