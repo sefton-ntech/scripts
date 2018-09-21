@@ -10,6 +10,7 @@ VISUAL=vim
 shopt -s histappend
 HISTFILESIZE=100000000000
 HISTSIZE=1000000000
+export HISTTIMEFORMAT="%h/%d - %H:%M:%S "
 CLICOLOR=1
 LSCOLORS=Dxfxcxdxbxegedabagacad
 LS_COLORS=$LS_COLORS:'di=1;33:' ; export LS_COLORS
